@@ -1,0 +1,65 @@
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+  
+label {
+  text-indent: -9999px;
+  margin-bottom: 0;
+  width: 30px;
+  height: 17.5px;
+  background: grey;
+  display: inline-block;
+  border-radius: 17.5px;
+  position: relative;
+}
+  
+label:after {
+  content: '';
+  position: absolute;
+  top: 1.25px;
+  left: 2.5px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 16.5px;
+}
+  
+input:checked + label {
+  background: #007bff;
+}
+  
+input:checked + label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%)
+}
+
+label:active:after{
+  width: 16.5px;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+#img-upload{
+  width: 100%;
+}
